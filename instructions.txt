@@ -1,5 +1,50 @@
 goals --- What we want it to do
 
-get key # ...see notes
+
+main interface -- you should pick a date and card data is returned
+
+get key # ...see notes parse date numerals and perform math function to get key number
 
 key returns object data of card, color, solomon code number
+
+need function to return color for selected card
+need function to return solomon code for selected card
+
+need function to generate solomon code for selected card
+
+card, color, and solomon code will alsways be paired together. and will always call the same information
+ex. call position 9, returns card name, color, and solomon code for that card.
+secondary generate each for a date range
+
+
+solomon code is ===
+    1. select card
+    2. determine the card position number
+    3. find 3 other kings, 7s, etc
+    4. determine positoning of the other three
+    5. arrange all 4 cards into CHSD
+    6. use stack position, use next card in chase sequence
+    7. use next three card's position numbers in CHSD sequence
+    8. last number is the face value of the original card
+
+determining the color ===
+1.value of card = color
+
+
+refactor to use with other stacks (to do later)
+-- REDFORD STACK EXAMPLE --
+need stack object with keys of card name, position, CHSD positioning
+{
+    redfordStack =[{
+        "id": "1",
+        "card": "Queen of Hearts",
+        "CHSDposition": "2"
+    }]
+}
+
+-- Color Reference Chart --
+created in colors.json database
+
+
+
+
