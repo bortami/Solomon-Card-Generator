@@ -27,20 +27,15 @@ solomon code is ===
     7. use next three card's position numbers in CHSD sequence
     8. last number is the face value of the original card
 
-determining the color ===
-1.value of card = color
+
+
+
 
 
 refactor to use with other stacks (to do later)
 -- REDFORD STACK EXAMPLE --
 need stack object with keys of card name, position, CHSD positioning
-{
-    redfordStack =[{
-        "id": "1",
-        "card": "Queen of Hearts",
-        "CHSDposition": "2"
-    }]
-}
+
 
 -- Color Reference Chart --
 created in colors.json database

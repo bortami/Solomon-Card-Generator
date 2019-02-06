@@ -1,45 +1,44 @@
 {
-    "colorSelector": [
+    "colorSelector": [{
+            "id": "1",
+            "color": "red"
+        },
         {
-        "id": "1",
-        "color": "red"
-    },
-    {
-        "id": "2",
-        "color": "orange"
-    },
-    {
-        "id": "7",
-        "color": "purple"
-    },
-    {
-        "id": "3",
-        "color": "yellow"
-    },
-    
-    {
-        "id": "4",
-        "color": "green"
-    },
-    {
-        "id": "5",
-        "color": "blue"
-    },
-    {
-        "id": "6",
-        "color": "indigo"
-    },
-    {
-        "id": "8",
-        "color": "black"
-    },
-    {
-        "id": "9",
-        "color": "white"
-    },
-    {
-        "id": "0",
-        "color": "silver"
-    }
+            "id": "2",
+            "color": "orange"
+        },
+        {
+            "id": "7",
+            "color": "purple"
+        },
+        {
+            "id": "3",
+            "color": "yellow"
+        },
+
+        {
+            "id": "4",
+            "color": "green"
+        },
+        {
+            "id": "5",
+            "color": "blue"
+        },
+        {
+            "id": "6",
+            "color": "indigo"
+        },
+        {
+            "id": "8",
+            "color": "black"
+        },
+        {
+            "id": "9",
+            "color": "white"
+        },
+        {
+            "id": "0",
+            "color": "silver"
+        }
     ]
 }
