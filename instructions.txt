@@ -1,0 +1,5 @@
+goals --- What we want it to do
+
+get key # ...see notes
+
+key returns object data of card, color, solomon code number
