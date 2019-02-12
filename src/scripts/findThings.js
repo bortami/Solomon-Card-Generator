@@ -1,7 +1,7 @@
 //takes card position number and returns corresponding color//
 
 const findCardColor = (colorNumber) => {
-    fetch(`http://localhost:8088/colorSelector?id=${colorNumber}`)
+    fetch(`http://localhost:8090/colorSelector?id=${colorNumber}`)
         .then(response => response.json())
         .then(cards => {
             console.log(cards[0].color)
@@ -10,7 +10,7 @@ const findCardColor = (colorNumber) => {
 
 //finds the cards's position in the Redford Stack
 const findCardPosition = (faceParam, suitParam) => {
-    fetch(`http://localhost:8089/cardInformation/?suit=${suitParam}&face=${faceParam}`)
+    return fetch(`http://localhost:8089/cardInformation/?suit=${suitParam}&face=${faceParam}`)
         .then(response => response.json())
         .then(cards => {
             console.log("This is the position in the Redford Stack", cards[0].redford)
