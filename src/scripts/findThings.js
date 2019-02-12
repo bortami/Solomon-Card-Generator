@@ -13,28 +13,68 @@ const findCardPosition = (faceParam, suitParam) => {
     return fetch(`http://localhost:8089/cardInformation/?suit=${suitParam}&face=${faceParam}`)
         .then(response => response.json())
         .then(cards => {
-            console.log("This is the position in the Redford Stack", cards[0].redford)
+            redposition = cards[0].redford
+            console.log(redpostion)
+            return redposition
         })
 }
-findCardPosition("Seven", "Hearts");
+// findCardPosition("Seven", "Hearts");
 
-//find's the all face cards that were inputted's CHSD position
-const findCHSDPositions = (faceParam, suitParam) => {
-    fetch(`http://localhost:8089/cardInformation/?face=${faceParam}&suit!=${suitParam}`)
+//finds the inputed card's chsd postion
+const findCHSDPosition = (faceParam, suitParam) => {
+    fetch(`http://localhost:8089/cardInformation/?face=${faceParam}&suit=${suitParam}`)
         .then(response => response.json())
         .then(cards => {
-            let cardsinfo = [];
-            for (i = 0; i < cards.length; i++) {
-                cardsinfo.push(cards[i]);
-                console.log(cardsinfo);
-            }
-            return cardsinfo;
+            cards.forEach(singleCard => {
+                    selectedchsd = singleCard.chsd_position
+                    console.log(selectedchsd)
+                    return selectedchsd
+                }
+
+            )
         })
 }
+//returns the chsd position of the first card in the code
+const findStartingCard = (selectedchsd) => {
+    startingCard = selectedchsd + 1
+    console.log(startingCard)
+    return startingCard
+}
 
-const findThree = findCHSDPositions("Three", "Hearts");
+//returns the code snipper of the card
+const findCodeSnippet = (faceParam, startingCard) => {
+    fetch(`http://localhost:8089/cardInformation/?face=${faceParam}`)
+        .then(response => response.json())
+        .then(cards => {
+                codesnippet = "";
+                cards.forEach(singleCard => {
+                    if (startingCard === singleCard.chsd_position) {
+                        codesnippet += singleCard.redford
+                    } else {
+                        console.error("not it")
+                    }
+                    console.log(codesnippet)
+                    return codesnippet;
+                })
+            }
+
+        )
+
+}
 
 
+
+
+
+
+findCHSDPosition("Two", "Clubs")
+
+
+const doStuff = (faceParam, suitParam) => {
+    console.log(findCodeSnippets(faceParam, findStartingCard(findCHSDPosition(faceParam, suitParam))));
+
+}
+doStuff("Two", "Clubs");
 // 1. select card //
 // 2. determine the card position number
 // 3. find 3 other kings, 7s, etc
